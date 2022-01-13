@@ -7,7 +7,7 @@
 
 **Finalidade**
 
-Um projeto com a finalidade de estudo o desenvolvimento de interfaces responsivas para aplicativos mobile em flutter. 
+Um projeto com a finalidade de estudo referente ao desenvolvimento de interfaces responsivas para aplicativos mobile em flutter. 
 Para o desenvolvimento desse projeto foi utilizado o como referencia o projeto do desenvolvedor [Abuanwar072](https://github.com/abuanwar072).
 
 **Link do projeto utilizao como base**
