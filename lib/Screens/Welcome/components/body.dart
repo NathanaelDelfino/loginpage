@@ -27,35 +27,6 @@ class Body extends StatelessWidget {
   }
 }
 
-class DesktopWelcomeScreen extends StatelessWidget {
-  const DesktopWelcomeScreen({
-    Key? key,
-    required this.size,
-  }) : super(key: key);
-
-  final Size size;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Expanded(child: WelcomeImage()),
-        Expanded(
-            child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(
-              width: 450,
-              child: LoginAndSignUp(),
-            ),
-          ],
-        )),
-      ],
-    );
-  }
-}
-
 class WelcomeImage extends StatelessWidget {
   const WelcomeImage({
     Key? key,
@@ -106,6 +77,35 @@ class LoginAndSignUp extends StatelessWidget {
                 },
             color: kPrimaryColorLight,
             textColor: Colors.black),
+      ],
+    );
+  }
+}
+
+class DesktopWelcomeScreen extends StatelessWidget {
+  const DesktopWelcomeScreen({
+    Key? key,
+    required this.size,
+  }) : super(key: key);
+
+  final Size size;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Expanded(child: WelcomeImage()),
+        Expanded(
+            child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(
+              width: 450,
+              child: LoginAndSignUp(),
+            ),
+          ],
+        )),
       ],
     );
   }

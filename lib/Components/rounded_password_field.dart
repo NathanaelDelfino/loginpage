@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:loginpagedart/Components/text_field_container.dart';
 import 'package:loginpagedart/constants.dart';
 
-class RoundedPasswordField extends StatelessWidget {
+class RoundedPasswordField extends StatefulWidget {
   final ValueChanged<String> onChanged;
 
   const RoundedPasswordField({
@@ -12,8 +12,13 @@ class RoundedPasswordField extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  State<RoundedPasswordField> createState() => _RoundedPasswordFieldState();
+}
+
+class _RoundedPasswordFieldState extends State<RoundedPasswordField> {
+  bool viewPassword = false;
+  @override
   Widget build(BuildContext context) {
-    bool viewPassword = true;
     return TextFildContainer(
       child: TextField(
         keyboardType: TextInputType.numberWithOptions(decimal: true),
@@ -27,7 +32,11 @@ class RoundedPasswordField extends StatelessWidget {
               viewPassword ? Icons.visibility : Icons.visibility_off,
               color: kPrimaryColor,
             ),
-            onPressed: () => {},
+            onPressed: () => {
+              setState(() {
+                viewPassword = !viewPassword;
+              })
+            },
           ),
         ),
       ),
